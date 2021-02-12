@@ -1,0 +1,195 @@
+/* import font */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;700&display=swap");
+
+/* colours
+--black-coffee: #322a26ff;
+--independence: #454b66ff;
+--glaucous: #677db7ff;
+--maximum-blue-purple: #9ca3dbff;
+*/
+
+/* browser defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* page settings */
+html {
+  font-family: "Fira Sans", sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: white;
+}
+
+body {
+  background-color: #677db7ff;
+  width: 100%;
+  min-height: 100vh;
+}
+
+nav {
+  background-color: #322a26ff;
+  display: flex;
+  justify-content: flex-end;
+  padding: 1.5rem;
+  position: fixed;
+  /* placing navbar fixed on top */
+  top: 0;
+  left: 0;
+  right: 0;
+  /* placing the nav bar always on top of the overlay image */
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+header {
+  height: 100vh;
+  background-color: #454b66ff;
+  background-image: url("https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80");
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* adding overlay for the header */
+header::after {
+  content: "";
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0.75;
+}
+
+/* all the elements in the header */
+header * {
+  position: relative;
+  z-index: 1;
+}
+
+header h1 {
+  font-size: 3.75rem;
+}
+
+header p {
+  font-size: 1.875rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+section {
+  text-align: center;
+  padding: 5rem;
+}
+
+.socal_links {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+}
+
+/* all the links contained within the class .social_links */
+.socal_links a {
+  color: white;
+  font-size: 2.5rem;
+  margin: 0 1.5rem;
+}
+
+#social {
+  background-color: #454b66ff;
+}
+
+/* the project settings */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+/* sizing the project tile */
+.project-tile {
+  max-width: 300px;
+  height: auto;
+  margin: 1rem;
+  border: 0.05rem solid black;
+  border-radius: 0.15rem;
+  /* animate the transform */
+  transition: transform 0.2s ease;
+}
+
+.project-tile:hover {
+  /* increase the size of the hovered image */
+  transform: scale(1.1);
+}
+
+/* size the image */
+.project-image {
+  width: 100%;
+  height: 100%;
+}
+
+div a {
+  color: white;
+  text-decoration: none;
+}
+
+div a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+footer {
+  background-color: #322a26ff;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* media queries for tablet and mobile */
+@media screen and (max-width: 62.5em) {
+  header h1 {
+    font-size: 3rem;
+  }
+  header p {
+    font-size: 1.5rem;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 37.5em) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+  header p {
+    font-size: 1rem;
+  }
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
